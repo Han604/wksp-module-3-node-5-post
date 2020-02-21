@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title><%= title %> </title>
+        <link rel="stylesheet" href=".../order-form/styles.css">
+    </head>
+    <body>
+        <div class="toDoInput">
+            <form action="/data" method="post"></form>
+            <div class="inputWrapper">
+                <label for="todo" class="todoItem">To do!</label>
+                <input type="text" name="todo" class="todoInput">
+            </div>
+            <button type="submit" class="todoSubmit">SUBMIT</button>
+        </div>
+        <ol class="todosWrapper"> <% todosArray.forEach(item => { %>
+            <li>
+            </li>
+        <% }) %> </ol>
+    </body>
+    <footer>
+
+    </footer>
+</html>

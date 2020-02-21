@@ -223,3 +223,12 @@ h2 {
     color: red;
     font-size: 14px;
 }
+
+.todosWrapper {
+    margin: auto;
+    width: 500px;
+    height: 80%;
+    bottom: 0em;
+    background-color: tan;
+    border: 1px solid black;
+}
