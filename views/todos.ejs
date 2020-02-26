@@ -7,15 +7,18 @@
     </head>
     <body>
         <div class="toDoInput">
-            <form action="/data" method="post"></form>
-            <div class="inputWrapper">
+            <form action="/data" method="post">
+                <div class="inputWrapper">
                 <label for="todo" class="todoItem">To do!</label>
-                <input type="text" name="todo" class="todoInput">
+                <input type="text" name="item" class="todoInput">
             </div>
-            <button type="submit" class="todoSubmit">SUBMIT</button>
+            <input value = 'test' type="submit" class="todoSubmit">
+        </form>
+            
         </div>
         <ol class="todosWrapper"> <% todosArray.forEach(item => { %>
             <li>
+                <%- item %> 
             </li>
         <% }) %> </ol>
     </body>
