@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const { stock, customers } = require('./data/promo')
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8888;
 const handleTodos = (req, res) => {
     res.render('todos.ejs', {
         title: 'To do list generator!',
@@ -22,7 +22,6 @@ const handleData = (req, res) => {
 const handleConfirm = (req, res) => {
     res.render('order-confirmed.ejs', {
         title: 'Your stinky confirmation',
-        orderData:orderData
     })
 }
 const handleOrder = (req, res) => {
@@ -82,19 +81,8 @@ const handleForm = (req, res) => {
         )
     }
     console.log('does it get here?')
-    res.render('order-confirmed.ejs', {
-        status:status,
-        givenName:givenName,
-        surname:surname,
-        order:order,
-        size:size,
-        email:email,
-        address:address,
-        city:city,
-        country:country,
-        postcode:postcode,
-        province:province,
-        title: 'Order your shitty merch'
+    res.send ({
+        status: status
     })
 }
 
